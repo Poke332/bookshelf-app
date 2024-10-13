@@ -141,3 +141,13 @@ main {
   width: 30vw;
   gap: 12px;
 }
+
+@media screen and (max-width: 900px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  #search {
+    flex-direction: column;
+  }
+}

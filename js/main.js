@@ -6,7 +6,7 @@ const books = [];
 function addBook() {
   const bookTitle = document.getElementById('bookFormTitle').value;
   const bookAuthor = document.getElementById('bookFormAuthor').value;
-  const bookYear = document.getElementById('bookFormYear').value;
+  const bookYear = parseInt(document.getElementById('bookFormYear').value);
   const isComplete = document.getElementById('bookFormIsComplete').checked;
 
   const generatedID = generateId();
