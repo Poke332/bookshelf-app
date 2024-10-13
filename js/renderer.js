@@ -6,7 +6,7 @@ function generateId() {
   return +new Date();
 }
 
-function generateBookObject(id, title, author, year, isCompleted) {
+function generateBookObject(id, title, author, year, isComplete) {
   return {
     id,
     title,
