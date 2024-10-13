@@ -1,4 +1,4 @@
-import { changeCompleteStatus, removeBookItem } from "./button.js";
+import { changeCompleteStatus, removeBookItem, makeEditMenu } from "./button.js";
 
 const RENDER_EVENT = 'render-books'
 
@@ -52,9 +52,16 @@ function makeBook(bookObject, bookArray) {
   );
   deleteButton.innerText = 'Delete Book';
 
+  const editButton = document.createElement('button');
+  editButton.setAttribute('data-testid', 'bookItemEditButton')
+  editButton.addEventListener('click', function() {
+    makeEditMenu(id, bookArray);
+  });
+  editButton.innerText = 'Edit Book'
+
 
   container.append(bookTitle, bookAuthor, bookYear, buttonContainer)
-  buttonContainer.append(completeButton, deleteButton)
+  buttonContainer.append(completeButton, deleteButton, editButton)
   
   if (isCompleted) {
     completeButton.innerText = 'Remove from Completed'

@@ -72,7 +72,7 @@ document.addEventListener(RENDER_EVENT, () => {
   completedList.innerHTML = '';
 
   for (const bookItem of books) {
-    const bookElement = makeBook(bookItem, books, RENDER_EVENT);
+    const bookElement = makeBook(bookItem, books);
     if (bookItem.isCompleted) {
       completedList.append(bookElement);
     } else {
