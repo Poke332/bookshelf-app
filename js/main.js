@@ -31,7 +31,7 @@ function searchBookshelf(searchTitle) {
 
   for (const bookItem of searched) {
     const bookElement = makeBook(bookItem, books, RENDER_EVENT);
-    if (bookItem.isCompleted) {
+    if (bookItem.isComplete) {
       completedList.append(bookElement);
     } else {
       incompleteList.append(bookElement);
@@ -73,7 +73,7 @@ document.addEventListener(RENDER_EVENT, () => {
 
   for (const bookItem of books) {
     const bookElement = makeBook(bookItem, books);
-    if (bookItem.isCompleted) {
+    if (bookItem.isComplete) {
       completedList.append(bookElement);
     } else {
       incompleteList.append(bookElement);

@@ -19,7 +19,7 @@ function changeCompleteStatus(targetId, bookArray) {
 
   if (bookTarget == null) return;
 
-  bookTarget.isCompleted? bookTarget.isCompleted = false : bookTarget.isCompleted = true;
+  bookTarget.isComplete? bookTarget.isComplete = false : bookTarget.isComplete = true;
 
   document.dispatchEvent(new Event(RENDER_EVENT));
   saveData(bookArray);

@@ -12,13 +12,13 @@ function generateBookObject(id, title, author, year, isCompleted) {
     title,
     author,
     year,
-    isCompleted
+    isComplete
   };
 }
 
 function makeBook(bookObject, bookArray) {
 
-  const {id, title, author, year, isCompleted} = bookObject;
+  const {id, title, author, year, isComplete} = bookObject;
 
   const container = document.createElement('div');
   container.classList.add('books', 'container')
@@ -63,7 +63,7 @@ function makeBook(bookObject, bookArray) {
   container.append(bookTitle, bookAuthor, bookYear, buttonContainer)
   buttonContainer.append(completeButton, deleteButton, editButton)
   
-  if (isCompleted) {
+  if (isComplete) {
     completeButton.innerText = 'Remove from Completed'
   } else {
     completeButton.innerHTML = 'Add to Completed'
